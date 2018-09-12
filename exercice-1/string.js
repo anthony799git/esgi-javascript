@@ -25,6 +25,7 @@ function prop_access(object, key_value){
     var keys = key_value.split(".")
 
     for (var key of keys){
+        console.log(key,typeof this[key],object[key])
         if(typeof object[key] === "undefined")
             return key_value + " not exist"
         object = object[key]
@@ -77,4 +78,4 @@ function vig(message, key) {
 
 prairie = {"animal" : {"type" : {"name" : "chien", "tete" : "oui"}}};
 
-console.log(vig("wikipedia","crypto"));
+console.log(prop_access(prairie,"animal.type.name"));
