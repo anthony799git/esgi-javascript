@@ -15,13 +15,13 @@ function camelCase(string){
     return res;
     
 }
-function snakeCase(string){
+function snake_case(string){
     var res = string.toLowerCase().replace(/\s/g, "-") 
     return res;
     
 }
 
-function propAccess(object, key_value){
+function prop_access(object, key_value){
     var keys = key_value.split(".")
 
     for (var key of keys){
@@ -56,7 +56,7 @@ function yoda(string){
 
 
 function vig(message, key) {  
-    var result = [];
+    var res = [];
     var letterCounter = 0;
     var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
     var rowIndex, colIndex;
@@ -65,13 +65,13 @@ function vig(message, key) {
 
         rowIndex = alphabet.indexOf(key[i]);
         colIndex = alphabet.indexOf(message[letterCounter]);
-        result.push(alphabet[(rowIndex + colIndex) % alphabet.length]); 
+        res.push(alphabet[(rowIndex + colIndex) % alphabet.length]); 
         letterCounter++;
         if (letterCounter >= message.length) 
             break;
       }
     }
-    return result.join('');
+    return res.join('');
   }
   
 
